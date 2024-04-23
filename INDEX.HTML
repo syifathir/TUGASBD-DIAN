@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RUMAH MANGAN DIAN</title>
+    <style>
+        /* CSS styling (opsional, bisa Anda sesuaikan) */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #bbafba;
+        }
+        header {
+            background-color: #8a2e73;
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .menu-item {
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            margin-bottom: 10px;
+            padding: 10px;
+            background-color: #fff;
+        }
+        .menu-item h2 {
+            margin-top: 0;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>RUMAH MANGAN DIAN</h1>
+    </header>
+    <div class="container">
+        <h2>Menu</h2>
+        <div class="menu-item">
+            
+            <h2>Ayam Goreng</h2>
+            <p>Ayam goreng dengan bumbu tradisional, disajikan dengan nasi putih hangat.</p>
+            <p>Harga: Rp 20.000</p>
+            <button onclick="tambahKeKeranjang('Ayam Goreng', 20000)">Tambah ke Keranjang</button>
+        </div>
+        <div class="menu-item">
+            <h2>Nasi Goreng</h2>
+            <p>Nasi goreng spesial dengan campuran sayuran segar dan telur dadar.</p>
+            <p>Harga: Rp 15.000</p>
+            <button onclick="tambahKeKeranjang('Nasi Goreng', 15000)">Tambah ke Keranjang</button>
+        </div>
+        <div class="menu-item">
+            <h2>Sate Ayam</h2>
+            <p>Sate ayam yang lezat dengan bumbu kacang khas.</p>
+            <p>Harga: Rp 25.000</p>
+            <button onclick="tambahKeKeranjang('Sate Ayam', 25000)">Tambah ke Keranjang</button>
+        </div>
+        <div class="menu-item">
+            <h2>Mie Goreng Spesial</h2>
+            <p>Mie goreng dengan tambahan udang, bakso, dan irisan telur ceplok.</p>
+            <p>Harga: Rp 18.000</p>
+            <button onclick="tambahKeKeranjang('Mie Goreng Spesial', 18000)">Tambah ke Keranjang</button>
+        </div>
+        <div class="menu-item">
+            <h2>Pecel Lele</h2>
+            <p>Pecel lele dengan sambal khas, lalapan, dan nasi putih.</p>
+            <p>Harga: Rp 22.000</p>
+            <button onclick="tambahKeKeranjang('Pecel Lele', 22000)">Tambah ke Keranjang</button>
+        </div>
+        <!-- Tambahkan item-menu lainnya sesuai kebutuhan -->
+        <h2>Keranjang Belanja</h2>
+        <ul id="keranjang-belanja">
+            <!-- Item akan ditambahkan oleh JavaScript -->
+        </ul>
+    </div>
+
+    <script>
+        // JavaScript untuk menambahkan item ke keranjang belanja
+        function tambahKeKeranjang(nama, harga) {
+            var keranjangBelanja = document.getElementById('keranjang-belanja');
+            var itemBaru = document.createElement('li');
+            itemBaru.textContent = nama + ' - Rp ' + harga;
+            keranjangBelanja.appendChild(itemBaru);
+        }
+    </script>
+</body>
+</html>
